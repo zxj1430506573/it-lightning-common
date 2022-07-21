@@ -5,7 +5,40 @@
             </h2>
             <!-- Base variant: Makes a button look like a link -->
             <lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-            
+
+            <h2 class="slds-text-heading_small slds-m-bottom_small">
+                测试Emp API
+            </h2>
+
+            <lightning-card title="EmpApi Example" icon-name="custom:custom14">
+                <div class="slds-m-around_medium">
+                    <p>
+                        Use the buttons below to subscribe and unsubscribe to a
+                        streaming channel!
+                    </p>
+                    <lightning-input
+                        label="Channel Name"
+                        value={channelName}
+                        onchange={handleChannelName}
+                    ></lightning-input>
+                    <lightning-button
+                        variant="success"
+                        label="Subscribe"
+                        title="Subscribe"
+                        onclick={handleSubscribe}
+                        disabled={isSubscribeDisabled}
+                        class="slds-m-left_x-small"
+                    ></lightning-button>
+                    <lightning-button
+                        variant="destructive"
+                        label="Unsubscribe"
+                        title="Unsubscribe"
+                        onclick={handleUnsubscribe}
+                        disabled={isUnsubscribeDisabled}
+                        class="slds-m-left_x-small"
+                    ></lightning-button>
+                </div>
+            </lightning-card>
     </div>
   
 </template>
