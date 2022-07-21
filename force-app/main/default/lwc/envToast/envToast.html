@@ -1,0 +1,27 @@
+<template>
+    <div data-id="toastModel" class="slds-hide forceToastManager forceToastManager--default">
+        <div class="forceVisualMessageQueue">
+            <div class="toastContainer slds-notify_container">
+                <div class={mainDivClass} role="status">
+                    <span class="slds-assistive-text">{variant}</span>
+                    <span class={messageDivClass} title={message}>
+                        <lightning-icon icon-name={iconName} size="small" variant="inverse"></lightning-icon>
+                    </span>
+                    <div class="slds-notify__content">
+                        <div class="slds-align-middle slds-hyphenate">
+                            <h2 if:true={title} class="slds-text-heading_small">{title}</h2>
+                            <div class="slds-notify__text">
+                                <lightning-formatted-rich-text value={message}></lightning-formatted-rich-text>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slds-button slds-notify__close slds-button_icon slds-button_icon-inverse"
+                        title="Close" onclick={closeModel}>
+                        <lightning-icon icon-name="utility:close" size="small" variant="inverse"> </lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

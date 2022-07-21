@@ -1,6 +1,13 @@
 import { LightningElement } from 'lwc';
 import DcElement from 'c/dcElement';
-export default class TestReduxPublishCallApex extends DcElement(LightningElement) {
+export default class TestReduxPublishCallApex extends DcElement{
+
+    connectedCallback(){
+        super.connectedCallback();
+        console.log('========')
+        
+    }
+    
     handleClick(event){
         console.log('===>')
 
@@ -15,4 +22,10 @@ export default class TestReduxPublishCallApex extends DcElement(LightningElement
         })
         
     }
+
+    subscribeTestPusSub({action,data}){
+        console.log(action,data)
+    }
+    
+
 }

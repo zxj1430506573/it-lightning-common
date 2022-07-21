@@ -1,0 +1,17 @@
+@media (max-width: 575.98px) {
+    .slds-notify_toast {
+        min-width: 20rem !important;
+        max-width: 22rem;
+    }
+}
+
+.slds-notify__text {
+    word-break: break-word;
+}
+
+:host([data-index="1"]) .toastContainer {
+    top: 100px
+}
+:host([data-index="2"]) .toastContainer {
+    top: 200px
+}
